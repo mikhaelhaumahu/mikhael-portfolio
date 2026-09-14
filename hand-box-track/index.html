@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hand Box Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="stage">
+    <video id="video" autoplay playsinline muted></video>
+    <canvas id="overlay"></canvas>
+    <p id="status">Memuat model kecerdasan buatan...</p>
+  </div>
+
+  <div id="toolbar">
+    <button class="toggle active" data-toggle="zoom">Zoom Box</button>
+    <button class="toggle active" data-toggle="points">Titik Sendi</button>
+    <button class="toggle" data-toggle="skeleton">Kerangka</button>
+    <button class="toggle active" data-toggle="dim">Redup Latar</button>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

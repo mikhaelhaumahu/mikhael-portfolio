@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gambar dengan Gerakan Tangan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Gambar dengan Gerakan Tangan</h1>
+  </header>
+
+  <main>
+    <div id="stage">
+      <video id="video" autoplay playsinline muted></video>
+      <canvas id="draw"></canvas>
+      <canvas id="overlay"></canvas>
+    </div>
+
+    <p id="status">Memuat model kecerdasan buatan...</p>
+
+    <div id="toolbar">
+      <div class="palette">
+        <button class="color active" data-color="#ff5252"></button>
+        <button class="color" data-color="#ff9800"></button>
+        <button class="color" data-color="#ffd740"></button>
+        <button class="color" data-color="#69f0ae"></button>
+        <button class="color" data-color="#40c4ff"></button>
+        <button class="color" data-color="#536dfe"></button>
+        <button class="color" data-color="#e040fb"></button>
+        <button class="color" data-color="#ffffff"></button>
+      </div>
+      <div class="thickness">
+        <button class="size" data-size="0.006">Tipis</button>
+        <button class="size active" data-size="0.012">Sedang</button>
+        <button class="size" data-size="0.02">Tebal</button>
+      </div>
+      <button id="clear">Reset</button>
+    </div>
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

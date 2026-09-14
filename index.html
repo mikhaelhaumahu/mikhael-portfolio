@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mikhael Stevano Haumahu | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Particle Background Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Glowing Cursor Follower -->
+  <div class="cursor-glow" id="cursor-glow"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-text">MSH</span><span class="logo-dot">.</span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#about" class="nav-link"><i class="fa-solid fa-user"></i> Tentang</a>
+        <a href="#skills" class="nav-link"><i class="fa-solid fa-code"></i> Keahlian</a>
+        <a href="#projects" class="nav-link"><i class="fa-solid fa-laptop-code"></i> Proyek</a>
+        <a href="#experience" class="nav-link"><i class="fa-solid fa-briefcase"></i> Pengalaman</a>
+        <a href="#contact" class="nav-link"><i class="fa-solid fa-paper-plane"></i> Kontak</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-sm btn-primary">Hubungi Saya</a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge-status">
+            <span class="pulse-dot"></span>
+            <span>Mahasiswa Baru Ilmu Komputer UNPATTI</span>
+          </div>
+
+          <h1 class="hero-title">
+            Halo, Saya <br>
+            <span class="gradient-text">Mikhael Stevano Haumahu</span>
+          </h1>
+
+          <div class="typing-container">
+            <span class="typing-static">Saya </span>
+            <span class="typing-text" id="typing-text"></span>
+            <span class="typing-cursor">|</span>
+          </div>
+
+          <p class="hero-description">
+            Mahasiswa Ilmu Komputer Universitas Pattimura yang antusias mempelajari dunia pemrograman, pengembangan web, dan teknologi digital masa depan.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-rocket"></i> Lihat Portofolio
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fa-solid fa-envelope"></i> Hubungi Saya
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://github.com/mikhaelhaumahu" target="_blank" class="social-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://instagram.com/_mikhaell28" target="_blank" class="social-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:mikhaelhaumahuu@gmail.com" class="social-link" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="glass-card hero-card tilt-element">
+            <div class="card-header-bar">
+              <div class="dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="card-title-text">mikhael_profile.config.js</div>
+            </div>
+            <div class="card-code-body">
+              <pre><code><span class="code-keyword">const</span> <span class="code-def">student</span> = {
+  <span class="code-prop">name</span>: <span class="code-string">'Mikhael Stevano Haumahu'</span>,
+  <span class="code-prop">university</span>: <span class="code-string">'Universitas Pattimura (UNPATTI)'</span>,
+  <span class="code-prop">major</span>: <span class="code-string">'Ilmu Komputer (Mahasiswa Baru)'</span>,
+  <span class="code-prop">highSchool</span>: <span class="code-string">'SMA Negeri 4 Ambon'</span>,
+  <span class="code-prop">location</span>: <span class="code-string">'Ambon, Maluku, Indonesia'</span>,
+  <span class="code-prop">skills</span>: [
+    <span class="code-string">'Git & GitHub (Push/Commit)'</span>,
+    <span class="code-string">'AI Collaboration'</span>,
+    <span class="code-string">'HTML/CSS Dasar'</span>
+  ],
+  <span class="code-prop">status</span>: <span class="code-string">'Fokus Kuliah & Belajar Coding 🚀'</span>
+};</code></pre>
+            </div>
+            <div class="card-footer-badge">
+              <i class="fa-solid fa-code-commit"></i> Ready to Collaborate
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-down-indicator" aria-label="Scroll Down">
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Mengenal Lebih Dekat</span>
+          <h2 class="section-title">Tentang <span class="gradient-text">Saya</span></h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-image-wrapper">
+            <div class="glass-card about-card tilt-element">
+              <div class="avatar-placeholder">
+                <i class="fa-solid fa-user-astronaut avatar-icon"></i>
+              </div>
+              <div class="about-card-badge">
+                <i class="fa-solid fa-graduation-cap"></i> Student & Tech Explorer
+              </div>
+            </div>
+          </div>
+
+          <div class="about-info">
+            <h3 class="about-heading">Langkah Awal Menuju Dunia Teknologi & Pemrograman</h3>
+            <p class="about-text">
+              Saya adalah Mahasiswa Baru (Maba) jurusan Ilmu Komputer di Universitas Pattimura (UNPATTI) Ambon. Setelah menyelesaikan pendidikan di SMA Negeri 4 Ambon, saya memutuskan untuk mendalami minat saya di bidang teknologi komputer dan pemrograman.
+            </p>
+            <p class="about-text">
+              Meskipun baru memulai perjalanan di dunia IT, saya memiliki rasa ingin tahu yang tinggi dan semangat pantang menyerah untuk mempelajari algoritma, logika pemrograman, serta pengembangan web dari dasar hingga mahir.
+            </p>
+
+            <div class="stats-grid">
+              <div class="glass-card stat-card">
+                <span class="stat-number" data-target="2026">0</span>
+                <span class="stat-label">Maba UNPATTI</span>
+              </div>
+              <div class="glass-card stat-card">
+                <span class="stat-number" data-target="100">0</span><span class="stat-plus">%</span>
+                <span class="stat-label">Semangat Belajar</span>
+              </div>
+              <div class="glass-card stat-card">
+                <span class="stat-number" data-target="2">0</span>
+                <span class="stat-label">Matkul Prodi CS</span>
+              </div>
+              <div class="glass-card stat-card">
+                <span class="stat-number" data-target="1">0</span><span class="stat-plus">st</span>
+                <span class="stat-label">Portofolio Interaktif</span>
+              </div>
+            </div>
+
+            <div class="interests-container">
+              <span class="interest-pill"><i class="fa-solid fa-code"></i> Dasar Pemrograman</span>
+              <span class="interest-pill"><i class="fa-brands fa-git-alt"></i> Git & GitHub</span>
+              <span class="interest-pill"><i class="fa-solid fa-robot"></i> AI Tools</span>
+              <span class="interest-pill"><i class="fa-solid fa-desktop"></i> Pengantar Teknologi Informasi</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills / Courses Section -->
+    <section id="skills" class="section-padding section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Studi Semester 1 UNPATTI</span>
+          <h2 class="section-title">Mata Kuliah & <span class="gradient-text">Progres</span></h2>
+        </div>
+
+        <div class="skills-filter">
+          <button class="filter-btn active" data-category="all">Semua</button>
+          <button class="filter-btn" data-category="prodi">Matkul Prodi CS</button>
+          <button class="filter-btn" data-category="tools">Tools & Workflow</button>
+        </div>
+
+        <div class="skills-grid" id="skills-grid">
+          <!-- Matkul Prodi 1 -->
+          <div class="glass-card skill-card" data-category="prodi">
+            <div class="skill-header">
+              <i class="fa-solid fa-code skill-icon js-color"></i>
+              <span class="skill-name">Dasar-Dasar Pemrograman</span>
+            </div>
+            <div class="skill-bar-container">
+              <div class="skill-bar-fill" style="width: 0%;"></div>
+            </div>
+            <span class="skill-percent">0% (Semester 1)</span>
+          </div>
+
+          <!-- Matkul Prodi 2 -->
+          <div class="glass-card skill-card" data-category="prodi">
+            <div class="skill-header">
+              <i class="fa-solid fa-desktop skill-icon react-color"></i>
+              <span class="skill-name">Pengantar Teknologi Informasi (PTI)</span>
+            </div>
+            <div class="skill-bar-container">
+              <div class="skill-bar-fill" style="width: 0%;"></div>
+            </div>
+            <span class="skill-percent">0% (Semester 1)</span>
+          </div>
+
+          <!-- Tools -->
+          <div class="glass-card skill-card" data-category="tools">
+            <div class="skill-header">
+              <i class="fa-brands fa-git-alt skill-icon git-color"></i>
+              <span class="skill-name">Git & GitHub (Commit & Push)</span>
+            </div>
+            <div class="skill-bar-container">
+              <div class="skill-bar-fill" style="width: 100%;"></div>
+            </div>
+            <span class="skill-percent">Bisa (Praktis)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Hasil Eksplorasi Nyata</span>
+          <h2 class="section-title">Proyek & <span class="gradient-text">Eksperimen Kode</span></h2>
+        </div>
+
+        <div class="projects-filter">
+          <button class="proj-filter-btn active" data-filter="all">Semua</button>
+          <button class="proj-filter-btn" data-filter="ai">Eksperimen AI</button>
+          <button class="proj-filter-btn" data-filter="web">Web Basics</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Gambar dengan Gerakan Tangan -->
+          <div class="glass-card project-card tilt-element" data-category="ai" data-id="1">
+            <div class="project-banner alt-banner-1">
+              <div class="project-overlay"></div>
+              <i class="fa-solid fa-hand-sparkles project-icon-bg"></i>
+              <span class="project-tag">AI & Webcam</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Gambar dengan Gerakan Tangan</h3>
+              <p class="project-desc">Aplikasi interaktif canvas untuk menggambar secara langsung di layar menggunakan gerakan jari via kamera web (MediaPipe Hands).</p>
+              <div class="project-tech">
+                <span>HTML5 Canvas</span>
+                <span>MediaPipe Hands</span>
+                <span>JavaScript</span>
+                <span>Node.js</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn-icon open-modal-btn" data-id="1" title="Detail Proyek"><i class="fa-solid fa-expand"></i> Detail</button>
+                <a href="/hand-track-app/" target="_blank" class="btn-icon" title="Jalankan Aplikasi"><i class="fa-solid fa-play"></i> Buka App</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Hand Box Track -->
+          <div class="glass-card project-card tilt-element" data-category="ai" data-id="2">
+            <div class="project-banner alt-banner-3">
+              <div class="project-overlay"></div>
+              <i class="fa-solid fa-vector-square project-icon-bg"></i>
+              <span class="project-tag">AI Tracking</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Hand Box Track App</h3>
+              <p class="project-desc">Eksperimen pelacakan gestur tangan dan kotak interaktif pada layar menggunakan kamera web real-time.</p>
+              <div class="project-tech">
+                <span>MediaPipe</span>
+                <span>JavaScript</span>
+                <span>CSS Overlay</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn-icon open-modal-btn" data-id="2" title="Detail Proyek"><i class="fa-solid fa-expand"></i> Detail</button>
+                <a href="/hand-box-track/" target="_blank" class="btn-icon" title="Jalankan Aplikasi"><i class="fa-solid fa-play"></i> Buka App</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Portofolio Web Interaktif -->
+          <div class="glass-card project-card tilt-element" data-category="web" data-id="3">
+            <div class="project-banner">
+              <div class="project-overlay"></div>
+              <i class="fa-solid fa-laptop-code project-icon-bg"></i>
+              <span class="project-tag">Web Interaktif</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Personal Interactive Portfolio</h3>
+              <p class="project-desc">Website portofolio modern dengan efek partikel canvas, animasi ketik, dan desain glassmorphism.</p>
+              <div class="project-tech">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>Git/GitHub</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn-icon open-modal-btn" data-id="3" title="Detail Proyek"><i class="fa-solid fa-expand"></i> Detail</button>
+                <a href="/" class="btn-icon" title="Buka Halaman Utama"><i class="fa-solid fa-play"></i> Buka Web</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: HTML Sederhana -->
+          <div class="glass-card project-card tilt-element" data-category="web" data-id="4">
+            <div class="project-banner alt-banner-2">
+              <div class="project-overlay"></div>
+              <i class="fa-solid fa-code project-icon-bg"></i>
+              <span class="project-tag">Web Dasar</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Latihan Halaman HTML Sederhana</h3>
+              <p class="project-desc">Halaman web pertama dalam mempelajari dasar-dasar elemen tag HTML dan struktur dokumen web.</p>
+              <div class="project-tech">
+                <span>HTML5</span>
+                <span>CSS</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn-icon open-modal-btn" data-id="4" title="Detail Proyek"><i class="fa-solid fa-expand"></i> Detail</button>
+                <a href="/html-sederhana.html" target="_blank" class="btn-icon" title="Buka Halaman Web"><i class="fa-solid fa-play"></i> Buka Web</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section id="experience" class="section-padding section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Jejak Langkah</span>
+          <h2 class="section-title">Pengalaman & <span class="gradient-text">Pendidikan</span></h2>
+        </div>
+
+        <div class="timeline">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item left">
+            <div class="timeline-dot"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="glass-card timeline-content">
+              <span class="timeline-date">2026 - Sekarang</span>
+              <h3 class="timeline-role">Mahasiswa Baru Ilmu Komputer</h3>
+              <span class="timeline-company">Universitas Pattimura (UNPATTI) - Ambon</span>
+              <p class="timeline-desc">Memulai jenjang perkuliahan di jurusan Ilmu Komputer, fokus mempelajari dasar pemrograman, logika komputer, struktur data, dan rekayasa perangkat lunak.</p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item right">
+            <div class="timeline-dot"><i class="fa-solid fa-school"></i></div>
+            <div class="glass-card timeline-content">
+              <span class="timeline-date">Lulus</span>
+              <h3 class="timeline-role">Alumni Sekolah Menengah Atas</h3>
+              <span class="timeline-company">SMA Negeri 4 Ambon</span>
+              <p class="timeline-desc">Menyelesaikan pendidikan tingkat menengah atas dengan minat kuat di bidang sains dan teknologi informasi.</p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item left">
+            <div class="timeline-dot"><i class="fa-solid fa-code"></i></div>
+            <div class="glass-card timeline-content">
+              <span class="timeline-date">Perjalanan Pembelajar</span>
+              <h3 class="timeline-role">Pembelajar Mandiri & Eksplorasi Coding</h3>
+              <span class="timeline-company">Self-Learner & Open Source</span>
+              <p class="timeline-desc">Mencoba dan mengeksplorasi proyek-proyek web dasar seperti HTML, CSS, JavaScript, serta aplikasi interaktif sederhana.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Mari Berkomunikasi</span>
+          <h2 class="section-title">Hubungi <span class="gradient-text">Saya</span></h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3 class="contact-heading">Mari Terhubung & Berdiskusi</h3>
+            <p class="contact-desc">
+              Saya sangat senang untuk berkenalan dengan sesama mahasiswa, mentor, atau siapapun yang ingin berbagi ilmu dan pengalaman di bidang IT dan teknologi.
+            </p>
+
+            <div class="contact-methods">
+              <div class="glass-card contact-card">
+                <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <span class="contact-label">Email</span>
+                  <a href="mailto:mikhaelhaumahuu@gmail.com" class="contact-value">mikhaelhaumahuu@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="glass-card contact-card">
+                <div class="contact-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div>
+                  <span class="contact-label">Institusi</span>
+                  <span class="contact-value">Universitas Pattimura (UNPATTI)</span>
+                </div>
+              </div>
+
+              <div class="glass-card contact-card">
+                <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <span class="contact-label">Lokasi</span>
+                  <span class="contact-value">Ambon, Maluku, Indonesia</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card contact-form-card">
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="name">Nama Lengkap</label>
+                <input type="text" id="name" required placeholder="Masukkan nama Anda">
+              </div>
+
+              <div class="form-group">
+                <label for="email">Alamat Email</label>
+                <input type="email" id="email" required placeholder="nama@domain.com">
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subjek</label>
+                <input type="text" id="subject" required placeholder="Judul pesan Anda">
+              </div>
+
+              <div class="form-group">
+                <label for="message">Pesan</label>
+                <textarea id="message" rows="5" required placeholder="Tuliskan pesan atau ide proyek Anda di sini..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full">
+                <i class="fa-solid fa-paper-plane"></i> Kirim Pesan
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Project View -->
+  <div class="modal" id="project-modal">
+    <div class="modal-content glass-card">
+      <button class="modal-close" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
+      <div id="modal-body">
+        <!-- Content inserted dynamically via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <i class="fa-solid fa-circle-check toast-icon"></i>
+    <span id="toast-message">Pesan Anda berhasil dikirim!</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; 2026 <strong>Mikhael Stevano Haumahu</strong>. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="https://github.com/mikhaelhaumahu" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://instagram.com/_mikhaell28" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="mailto:mikhaelhaumahuu@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
